@@ -53,6 +53,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 
+	move_and_slide()
+
+#	movement manipulation
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
@@ -78,5 +81,3 @@ func _physics_process(delta: float) -> void:
 					repulsion_dir.y = 0.0
 					var repulsion_vec = repulsion_dir.normalized() * repulsion_force
 					velocity = velocity + repulsion_vec
-
-	move_and_slide()

@@ -1,7 +1,7 @@
 extends Node
 
 var guntype: int = 0
-const modecount = 4
+const modecount = 3
 
 func shoot(ray: RayCast3D) -> void:
 	if ray.is_colliding() and Input.is_action_just_pressed("shoot"):
