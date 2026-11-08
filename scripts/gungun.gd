@@ -3,6 +3,9 @@ extends Node
 var guntype: int = 0
 const modecount = 3
 
+# dont do more then 1 cause it breaks
+var propbounce: float = 1.0
+
 func shoot(ray: RayCast3D) -> void:
 	if ray.is_colliding() and Input.is_action_just_pressed("shoot"):
 		if ray.get_collider() is RigidBody3D:
@@ -15,6 +18,7 @@ func shoot(ray: RayCast3D) -> void:
 					groupswch(target, "speedy")
 				3:
 					groupswch(target, "boucy")
+					toggle_bouncyprop(target)
 				4:
 					groupswch(target, "repulsion")
 				_:
@@ -37,3 +41,10 @@ func groupswch(target: RigidBody3D, group: String) -> void:
 	else:
 		target.add_to_group(group)
 		print("object ", group + "d")
+
+func toggle_bouncyprop(target: RigidBody3D) -> void:
+	if target.is_in_group("prop") and target.physics_material_override:
+		if target.physics_material_override.bounce == propbounce:
+			target.physics_material_override.bounce = 0.0
+		else:
+			target.physics_material_override.bounce = propbounce

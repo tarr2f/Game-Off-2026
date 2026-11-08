@@ -1,15 +1,9 @@
 [gd_scene format=3 uid="uid://btu530iyamiyy"]
 
-[ext_resource type="Script" uid="uid://bs03mqsqqnyal" path="res://scripts/player.gd" id="1_lvjdj"]
-[ext_resource type="Texture2D" uid="uid://b1kledymotsxu" path="res://assets/textures/debug.png" id="2_rdi1l"]
-[ext_resource type="Script" uid="uid://76m3h7lx0d0b" path="res://scripts/crosshair.gd" id="3_rdi1l"]
+[ext_resource type="Texture2D" uid="uid://b1kledymotsxu" path="res://assets/textures/debug.png" id="1_lgrwq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txpwr"]
-albedo_texture = ExtResource("2_rdi1l")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_74sng"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_74sng"]
+albedo_texture = ExtResource("1_lgrwq")
 
 [sub_resource type="BoxMesh" id="BoxMesh_8rwly"]
 size = Vector3(6, 0.2, 6)
@@ -36,25 +30,6 @@ shadow_enabled = true
 material_override = SubResource("StandardMaterial3D_txpwr")
 use_collision = true
 size = Vector3(16, 0.1, 16)
-
-[node name="PLayer" type="CharacterBody3D" parent="." unique_id=351850418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
-script = ExtResource("1_lvjdj")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PLayer" unique_id=696265931]
-shape = SubResource("CapsuleShape3D_74sng")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PLayer" unique_id=1131169971]
-mesh = SubResource("CapsuleMesh_74sng")
-
-[node name="CamNode" type="Node3D" parent="PLayer" unique_id=1421274168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5999999, -0.3)
-
-[node name="PlayerCam" type="Camera3D" parent="PLayer/CamNode" unique_id=460499484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.9604645e-08)
-
-[node name="RayCast3D" type="RayCast3D" parent="PLayer/CamNode" unique_id=1457898444]
-transform = Transform3D(20, 0, 0, 0, -8.742278e-07, -20, 0, 20, -8.742278e-07, 0, 0, -0.19999999)
 
 [node name="Plats" type="Node3D" parent="." unique_id=1596243132]
 
@@ -106,7 +81,7 @@ mesh = SubResource("BoxMesh_8rwly")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -2.5)
 shape = SubResource("BoxShape3D_wrmqo")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1786452477]
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1786452477 groups=["prop"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.502051, -4.4)
 physics_material_override = SubResource("PhysicsMaterial_qmcnp")
 freeze = true
@@ -116,22 +91,6 @@ mesh = SubResource("BoxMesh_wrmqo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2059829445]
 shape = SubResource("BoxShape3D_74sng")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=150394327]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1806974095]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2.5
-offset_top = -2.5
-offset_right = 2.5
-offset_bottom = 2.5
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_rdi1l")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1318232048]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 9.1, 0.79999995, -1.9000007)
@@ -150,3 +109,6 @@ shape = SubResource("BoxShape3D_wrmqo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2/GravArea" unique_id=1070021562]
 transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, -3.5762787e-07, 0.5, -2.5)
 shape = SubResource("BoxShape3D_8rwly")
+
+[node name="SpawnPos" type="Marker3D" parent="." unique_id=363594784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.342457, 0)

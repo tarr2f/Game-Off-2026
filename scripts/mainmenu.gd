@@ -1,17 +1,26 @@
 extends Control
 
-@onready var levels: Button = $Levels
-@onready var settings: Button = $Settings
-@onready var exit: Button = $Exit
+@onready var levels: Button = $_main/Levels
+@onready var settings: Button = $_main/Settings
+@onready var exit: Button = $_main/Exit
 
-const DEBUG = preload("uid://btu530iyamiyy")
+@onready var _main: Control = $_main
+@onready var _levels: Control = $_levels
+
 
 func _ready() -> void:
 	exit.pressed.connect(on_exit)
-	levels.pressed.connect(on_levels)
+	levels.pressed.connect(jump_levels)
+	_levels.hide()
+	
 
 func on_exit() -> void:
 	get_tree().quit()
 
-func on_levels() -> void:
-	get_tree().change_scene_to_file("res://Scenes/debug.tscn")
+func jump_levels() -> void:
+	_main.hide()
+	_levels.show()
+
+func goback(current: Control) -> void:
+	current.hide()
+	_main.show()
