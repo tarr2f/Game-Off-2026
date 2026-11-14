@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://bs03mqsqqnyal" path="res://scripts/player.gd" id="1_lbhrr"]
 [ext_resource type="Script" uid="uid://76m3h7lx0d0b" path="res://scripts/crosshair.gd" id="2_iywne"]
 [ext_resource type="Script" uid="uid://bd0s6uhldoha" path="res://scripts/mainmenu.gd" id="3_p57ef"]
-[ext_resource type="Script" uid="uid://bu5ehqdrmk7hf" path="res://scripts/levels.gd" id="4_u5sy4"]
+[ext_resource type="Script" uid="uid://bu5ehqdrmk7hf" path="res://scripts/deblevels.gd" id="4_u5sy4"]
+[ext_resource type="Script" uid="uid://d3wj67po3uwec" path="res://scripts/levels.gd" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://cgs0ojxk4s10s" path="res://scripts/pause.gd" id="7_u5sy4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
 
@@ -13,6 +15,9 @@
 [sub_resource type="Theme" id="Theme_wrm1d"]
 
 [sub_resource type="FontFile" id="FontFile_3dryh"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -32,6 +37,10 @@ cache/0/90/0/descent = 0.0
 cache/0/90/0/underline_position = 0.0
 cache/0/90/0/underline_thickness = 0.0
 cache/0/90/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_p57ef"]
+
+[sub_resource type="Theme" id="Theme_ivo7y"]
 
 [node name="main" type="Node3D" unique_id=1601298586]
 script = ExtResource("1_iywne")
@@ -135,18 +144,32 @@ anchor_right = 0.171
 anchor_bottom = 0.17600001
 offset_left = 14.16
 offset_top = 42.96
-offset_right = 366.16
+offset_right = 417.16
 offset_bottom = 170.96
 theme = SubResource("Theme_wrm1d")
 theme_override_fonts/normal_font = SubResource("FontFile_3dryh")
 theme_override_font_sizes/normal_font_size = 90
-text = "GunRun"
+text = "Plat-Shift"
 
 [node name="_levels" type="Control" parent="Menu" unique_id=653156535]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("5_p57ef")
+
+[node name="Tutorial1" type="Button" parent="Menu/_levels" unique_id=88950142]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.5870001
+anchor_top = 5.1000004
+anchor_right = 3.5870001
+anchor_bottom = 5.1000004
+offset_left = -54.48001
+offset_top = -52.000015
+offset_right = 54.51999
+offset_bottom = 51.999985
+text = "^Tutorial1"
 
 [node name="Back" type="Button" parent="Menu/_levels" unique_id=751388910]
 layout_mode = 1
@@ -193,5 +216,78 @@ offset_top = -12.0
 offset_right = 29.519997
 offset_bottom = 19.0
 text = "back"
+
+[node name="_pause" type="Control" parent="Menu" unique_id=482366743]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_u5sy4")
+
+[node name="Pause" type="RichTextLabel" parent="Menu/_pause" unique_id=2062210372]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.637
+anchor_top = 2.0370002
+anchor_right = 5.637
+anchor_bottom = 2.0370002
+offset_left = -175.48001
+offset_top = -39.48001
+offset_right = 175.51999
+offset_bottom = 39.51999
+theme = SubResource("Theme_p57ef")
+theme_override_font_sizes/normal_font_size = 50
+text = "Game Paused"
+
+[node name="Resume" type="Button" parent="Menu/_pause" unique_id=1093377891]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.8370001
+anchor_top = 7.5250006
+anchor_right = 2.8370001
+anchor_bottom = 7.5250006
+offset_left = -50.480003
+offset_top = -21.00003
+offset_right = 50.519997
+offset_bottom = 20.99997
+theme = SubResource("Theme_ivo7y")
+theme_override_font_sizes/font_size = 24
+text = "Resume"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="Menu/_pause" unique_id=953435831]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.8370001
+anchor_top = 8.85
+anchor_right = 2.8370001
+anchor_bottom = 8.85
+offset_left = -50.480003
+offset_top = -21.0
+offset_right = 42.519997
+offset_bottom = 21.0
+theme = SubResource("Theme_ivo7y")
+theme_override_font_sizes/font_size = 24
+text = "Settins'"
+flat = true
+alignment = 0
+
+[node name="Menu" type="Button" parent="Menu/_pause" unique_id=2001758500]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.8370001
+anchor_top = 10.3
+anchor_right = 2.8370001
+anchor_bottom = 10.3
+offset_left = -50.480003
+offset_top = -26.0
+offset_right = 88.52
+offset_bottom = 16.0
+theme = SubResource("Theme_ivo7y")
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"
+flat = true
+alignment = 0
 
 [node name="level_con" type="Node3D" parent="." unique_id=2042272147]

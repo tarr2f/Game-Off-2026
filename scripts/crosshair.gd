@@ -3,11 +3,11 @@ extends ColorRect
 func _process(delta: float) -> void:
 	match gungun.guntype:
 		1:
-			color = Color.ROYAL_BLUE
-		2:
-			color = Color.INDIAN_RED
-		3:
 			color = Color.LIGHT_GREEN
+		2:
+			color = Color("#FF7525")
+		3:
+			color = Color("#2275FF")
 		4:
 			color = Color.LIGHT_SKY_BLUE
 		_:
