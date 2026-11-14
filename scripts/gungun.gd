@@ -3,7 +3,7 @@ extends Node
 var guntype: int = 0
 const modecount = 3
 
-# dont do more then 1 cause it breaks
+# NOTE: dont do more then 1 cause it breaks
 var propbounce: float = 1.0
 
 func shoot(ray: RayCast3D) -> void:
@@ -25,7 +25,7 @@ func shoot(ray: RayCast3D) -> void:
 					print("if its set to do nothing, nothing happens") 
 					# TODO - add stuff and remember to change modecount you idiot
 
-# omega debug - remove in playable build of game
+# HACK: omega debug - remove in playable build of game
 func _process(float) -> void:
 	if Input.is_action_just_pressed("wheel_up"):
 		guntype = clamp(guntype + 1, 0, modecount)
