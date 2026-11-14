@@ -17,3 +17,4 @@ switched to loading lia path again cause... idk why actually lol i forgor
 *theres allways an alternative option to loading levels*
 known issue: NO LEVELS YET! imma make levels. in the mean time dont go into levels cause theres no going back... literally
 note: i havent eaten anything but yoghurt yet so im very hungry
+also *via , not lia
