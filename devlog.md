@@ -18,3 +18,9 @@ switched to loading lia path again cause... idk why actually lol i forgor
 known issue: NO LEVELS YET! imma make levels. in the mean time dont go into levels cause theres no going back... literally
 note: i havent eaten anything but yoghurt yet so im very hungry
 also *via , not lia
+
+14.43  Nov.14
+added a pause menu and a first level :] called it tutorial1 but its just wip at the moment
+changed the crosshair colors for speedy and bouncy
+known issue: pause menu doesnt pause shi-
+note: thinking for a proper name for my game but im not sure. another release comming today on gh prolly
