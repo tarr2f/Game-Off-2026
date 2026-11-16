@@ -1,6 +1,7 @@
-extends Control
+extends CanvasLayer
 
 @onready var main = get_node("/root/main")
+# cause player is a global and stuff not working properly otherwise
 
 @onready var menu: Control = $".."
 

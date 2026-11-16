@@ -5,8 +5,6 @@ extends CharacterBody3D
 @onready var level_con: Node3D = $"../level_con"
 @onready var crosshair: ColorRect = $CanvasLayer/ColorRect
 
-@onready var isplaying: bool = false
-
 var def_speed = 5.0
 var speed = 5.0
 const jump_vel = 6.5
@@ -19,7 +17,6 @@ var repulsion_force: float = 5.0
 var spd_multipl = 3
 
 func _spawn() -> void:
-	isplaying = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	crosshair.visible = true
 	velocity = Vector3.ZERO
@@ -42,6 +39,9 @@ func _input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	gungun.shoot(ray_cast_3d)
+
+func _ready() -> void:
+	crosshair.visible = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

@@ -24,3 +24,11 @@ added a pause menu and a first level :] called it tutorial1 but its just wip at 
 changed the crosshair colors for speedy and bouncy
 known issue: pause menu doesnt pause shi-
 note: thinking for a proper name for my game but im not sure. another release comming today on gh prolly
+
+18.51  Nov.16
+made pause menu actually work :D finally. it was as easy as 'get_tree().paused = true' so im kinda ebarrassed that it took a whole day and a half
+switched from checking 'player.is_playing' to the way simpler and more reliable(hopefully) 'get_tree.paused'
+switched the control nodes in Menu to CanvasLayers: had to debug literally every script cause of extends's afterwards
+exit button wasnt working in main menu on my linux so added a print statement to debug. apperently that made it work again: keeping it in for random reasons lol
+note: started making silly-notes. also aannother release comming later today... maybe, if i got time. if not dev.has_time: dev.do(tomorrow) lol thats some real programming-language
+silly-note: why am i putting _ in front of ui group-names?? i have no idea but i like it :]

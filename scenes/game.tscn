@@ -88,202 +88,179 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_p57ef")
 
-[node name="_main" type="Control" parent="Menu" unique_id=639951019]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="_main" type="CanvasLayer" parent="Menu" unique_id=794745379]
 
 [node name="Levels" type="Button" parent="Menu/_main" unique_id=153033167]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.105000004
 anchor_top = 0.499
 anchor_right = 0.105000004
 anchor_bottom = 0.499
-offset_left = 32.8
-offset_top = 286.04
-offset_right = 199.8
-offset_bottom = 321.04
+offset_left = -83.96001
+offset_top = -17.35202
+offset_right = 83.03999
+offset_bottom = 17.64798
 grow_vertical = 2
 text = "Levels"
 
 [node name="Settings" type="Button" parent="Menu/_main" unique_id=1278989067]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.105000004
 anchor_top = 0.499
 anchor_right = 0.105000004
 anchor_bottom = 0.499
-offset_left = 33.8
-offset_top = 337.04
-offset_right = 200.8
-offset_bottom = 372.04
+offset_left = -82.96001
+offset_top = 33.64798
+offset_right = 84.03999
+offset_bottom = 68.64798
 grow_vertical = 2
 text = "Settings"
 
 [node name="Exit" type="Button" parent="Menu/_main" unique_id=1961226256]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.105000004
 anchor_top = 0.499
 anchor_right = 0.105000004
 anchor_bottom = 0.499
-offset_left = 33.8
-offset_top = 386.04
-offset_right = 200.8
-offset_bottom = 421.04
+offset_left = -82.96001
+offset_top = 82.64798
+offset_right = 84.03999
+offset_bottom = 117.64798
 grow_vertical = 2
 text = "Exit"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Menu/_main" unique_id=335670982]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.171
 anchor_top = 0.17600001
 anchor_right = 0.171
 anchor_bottom = 0.17600001
-offset_left = 14.16
-offset_top = 42.96
-offset_right = 417.16
-offset_bottom = 170.96
+offset_left = -175.992
+offset_top = -64.04801
+offset_right = 227.00797
+offset_bottom = 63.952003
 theme = SubResource("Theme_wrm1d")
 theme_override_fonts/normal_font = SubResource("FontFile_3dryh")
 theme_override_font_sizes/normal_font_size = 90
 text = "Plat-Shift"
 
-[node name="_levels" type="Control" parent="Menu" unique_id=653156535]
+[node name="_levels" type="CanvasLayer" parent="Menu" unique_id=1464886575]
 visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("5_p57ef")
 
 [node name="Tutorial1" type="Button" parent="Menu/_levels" unique_id=88950142]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 3.5870001
 anchor_top = 5.1000004
 anchor_right = 3.5870001
 anchor_bottom = 5.1000004
-offset_left = -54.48001
-offset_top = -52.000015
-offset_right = 54.51999
-offset_bottom = 51.999985
+offset_left = -4043.224
+offset_top = -3152.8003
+offset_right = -3934.224
+offset_bottom = -3048.8003
 text = "^Tutorial1"
 
 [node name="Back" type="Button" parent="Menu/_levels" unique_id=751388910]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.1370001
 anchor_top = 0.625
 anchor_right = 1.1370001
 anchor_bottom = 0.625
-offset_left = -29.480003
-offset_top = -12.0
-offset_right = 29.519997
-offset_bottom = 19.0
+offset_left = -1293.8241
+offset_top = -392.0
+offset_right = -1234.8241
+offset_bottom = -361.0
 text = "back"
 
-[node name="_deblevels" type="Control" parent="Menu" unique_id=973999387]
+[node name="_deblevels" type="CanvasLayer" parent="Menu" unique_id=1521432529]
 visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("4_u5sy4")
 
 [node name="Debug" type="Button" parent="Menu/_deblevels" unique_id=45509358]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 3.5870001
 anchor_top = 5.1000004
 anchor_right = 3.5870001
 anchor_bottom = 5.1000004
-offset_left = -54.48001
-offset_top = -52.000015
-offset_right = 54.51999
-offset_bottom = 51.999985
+offset_left = -4043.224
+offset_top = -3152.8003
+offset_right = -3934.224
+offset_bottom = -3048.8003
 text = "^debug"
 
 [node name="Back" type="Button" parent="Menu/_deblevels" unique_id=1477021451]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.1370001
 anchor_top = 0.625
 anchor_right = 1.1370001
 anchor_bottom = 0.625
-offset_left = -29.480003
-offset_top = -12.0
-offset_right = 29.519997
-offset_bottom = 19.0
+offset_left = -1293.8241
+offset_top = -392.0
+offset_right = -1234.8241
+offset_bottom = -361.0
 text = "back"
 
-[node name="_pause" type="Control" parent="Menu" unique_id=482366743]
+[node name="_pausemenu" type="CanvasLayer" parent="Menu" unique_id=1286632169]
+process_mode = 3
 visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("7_u5sy4")
 
-[node name="Pause" type="RichTextLabel" parent="Menu/_pause" unique_id=2062210372]
-layout_mode = 1
+[node name="Pause" type="RichTextLabel" parent="Menu/_pausemenu" unique_id=2062210372]
 anchors_preset = -1
 anchor_left = 5.637
 anchor_top = 2.0370002
 anchor_right = 5.637
 anchor_bottom = 2.0370002
-offset_left = -175.48001
-offset_top = -39.48001
-offset_right = 175.51999
-offset_bottom = 39.51999
+offset_left = -6443.824
+offset_top = -1277.9761
+offset_right = -6092.824
+offset_bottom = -1198.9761
 theme = SubResource("Theme_p57ef")
 theme_override_font_sizes/normal_font_size = 50
 text = "Game Paused"
 
-[node name="Resume" type="Button" parent="Menu/_pause" unique_id=1093377891]
-layout_mode = 1
+[node name="Resume" type="Button" parent="Menu/_pausemenu" unique_id=1093377891]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 7.5250006
 anchor_right = 2.8370001
 anchor_bottom = 7.5250006
-offset_left = -50.480003
-offset_top = -21.00003
-offset_right = 50.519997
-offset_bottom = 20.99997
+offset_left = -3205.224
+offset_top = -4596.2
+offset_right = -3104.224
+offset_bottom = -4554.2
 theme = SubResource("Theme_ivo7y")
 theme_override_font_sizes/font_size = 24
 text = "Resume"
 flat = true
 alignment = 0
 
-[node name="Settings" type="Button" parent="Menu/_pause" unique_id=953435831]
-layout_mode = 1
+[node name="Settings" type="Button" parent="Menu/_pausemenu" unique_id=953435831]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 8.85
 anchor_right = 2.8370001
 anchor_bottom = 8.85
-offset_left = -50.480003
-offset_top = -21.0
-offset_right = 42.519997
-offset_bottom = 21.0
+offset_left = -3205.224
+offset_top = -5401.8003
+offset_right = -3112.224
+offset_bottom = -5359.8003
 theme = SubResource("Theme_ivo7y")
 theme_override_font_sizes/font_size = 24
 text = "Settins'"
 flat = true
 alignment = 0
 
-[node name="Menu" type="Button" parent="Menu/_pause" unique_id=2001758500]
-layout_mode = 1
+[node name="Menu" type="Button" parent="Menu/_pausemenu" unique_id=2001758500]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 10.3
 anchor_right = 2.8370001
 anchor_bottom = 10.3
-offset_left = -50.480003
-offset_top = -26.0
-offset_right = 88.52
-offset_bottom = 16.0
+offset_left = -3205.224
+offset_top = -6288.4
+offset_right = -3066.224
+offset_bottom = -6246.4
 theme = SubResource("Theme_ivo7y")
 theme_override_font_sizes/font_size = 24
 text = "Main Menu"

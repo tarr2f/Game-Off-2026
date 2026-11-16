@@ -1,27 +1,26 @@
 extends Control
 
-@onready var player: CharacterBody3D = $"../PLayer"
-
 @onready var levels: Button = $_main/Levels
 @onready var settings: Button = $_main/Settings
 @onready var exit: Button = $_main/Exit
 
-@onready var _main: Control = $_main
-@onready var _levels: Control = $_levels
-@onready var _deblevels: Control = $"_deblevels"
-@onready var _pause: Control = $_pause
-
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("esc") and player.isplaying == true:
-		_pause.run()
+@onready var _main: CanvasLayer = $_main
+@onready var _levels: CanvasLayer = $_levels
+@onready var _deblevels: CanvasLayer = $_deblevels
+@onready var _pausemenu: CanvasLayer = $_pausemenu
 
 func _ready() -> void:
 	exit.pressed.connect(on_exit)
 	levels.pressed.connect(jump_levels)
-	_pause.hide()
+	
+	_pausemenu.hide()
+	_deblevels.hide()
+	_levels.hide()
 
 func on_exit() -> void:
+	print("exiting...")
 	get_tree().quit()
+# NOTE: keep print in cause it apperently makes the func work
 
 func jump_levels() -> void:
 	if Input.is_action_pressed("alt"):
@@ -29,6 +28,6 @@ func jump_levels() -> void:
 	else: _levels.show()
 	_main.hide()
 
-func goback(current: Control) -> void:
+func goback(current: CanvasLayer) -> void:
 	current.hide()
 	_main.show()
