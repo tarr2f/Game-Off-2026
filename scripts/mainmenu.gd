@@ -7,7 +7,7 @@ extends Control
 @onready var _main: CanvasLayer = $_main
 @onready var _levels: CanvasLayer = $_levels
 @onready var _deblevels: CanvasLayer = $_deblevels
-@onready var _pausemenu: CanvasLayer = $_pausemenu
+@onready var _pausemenu: CanvasLayer = $"../_pausemenu"
 
 func _ready() -> void:
 	exit.pressed.connect(on_exit)

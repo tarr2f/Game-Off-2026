@@ -32,3 +32,13 @@ switched the control nodes in Menu to CanvasLayers: had to debug literally every
 exit button wasnt working in main menu on my linux so added a print statement to debug. apperently that made it work again: keeping it in for random reasons lol
 note: started making silly-notes. also aannother release comming later today... maybe, if i got time. if not dev.has_time: dev.do(tomorrow) lol thats some real programming-language
 silly-note: why am i putting _ in front of ui group-names?? i have no idea but i like it :]
+
+~  Nov.17
+literally only added the current release into the repo
+
+  Nov.18
+put main menu into its own control node for organizational purpaces: had to redo most the imports once again...
+made the menu node render a generic back button instead of having every single main-menu menu have its own back button. why? idk, why not i guess lol
+^ nvm, reverted that cause it caused to much trouble with double-connecting or something. made cube keep velocity after freeze tho.
+note: ill maybe not commit daily cause ill focus on making levels over the week.
+silly-note: vocaloid songs r rlly good actually! you guys gotta listen to those if you dont already.

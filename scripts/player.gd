@@ -33,6 +33,7 @@ func _input(event: InputEvent) -> void:
 		cam_node.rotation.x = deg_to_rad(clamp(rad_to_deg(cam_node.rotation.x), -90, 90))
 	if Input.is_action_just_pressed("use"):
 		print("DEBUG // velocity: ", velocity)
+	# HACK: omega debug - remove in fairly playable version
 	if Input.is_action_just_pressed("use"):
 		spd_multipl = spd_multipl + 1
 		print(spd_multipl)

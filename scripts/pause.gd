@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var main: Node3D = $"../.."
+@onready var level_con: Node3D = $"../../level_con"
 
 @onready var resume: Button = $Resume
 @onready var settings: Button = $Settings
@@ -11,7 +12,7 @@ func _ready() -> void:
 	menu.pressed.connect(goto_menu)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("esc"):
+	if Input.is_action_just_pressed("esc") and not level_con.get_child_count() == 0:
 		run()
 
 func goto_resume() -> void:

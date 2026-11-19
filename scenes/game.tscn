@@ -81,16 +81,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_iywne")
 
-[node name="Menu" type="Control" parent="." unique_id=1624465427]
+[node name="gui" type="Control" parent="." unique_id=1624465427]
+process_mode = 3
 layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mainmenu" type="Control" parent="gui" unique_id=1064931890]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("3_p57ef")
 
-[node name="_main" type="CanvasLayer" parent="Menu" unique_id=794745379]
+[node name="_main" type="CanvasLayer" parent="gui/mainmenu" unique_id=794745379]
 
-[node name="Levels" type="Button" parent="Menu/_main" unique_id=153033167]
+[node name="Levels" type="Button" parent="gui/mainmenu/_main" unique_id=153033167]
 anchors_preset = -1
 anchor_left = 0.105000004
 anchor_top = 0.499
@@ -103,33 +109,33 @@ offset_bottom = 17.64798
 grow_vertical = 2
 text = "Levels"
 
-[node name="Settings" type="Button" parent="Menu/_main" unique_id=1278989067]
+[node name="Settings" type="Button" parent="gui/mainmenu/_main" unique_id=1278989067]
 anchors_preset = -1
 anchor_left = 0.105000004
-anchor_top = 0.499
+anchor_top = 0.578
 anchor_right = 0.105000004
-anchor_bottom = 0.499
+anchor_bottom = 0.578
 offset_left = -82.96001
-offset_top = 33.64798
+offset_top = -17.544006
 offset_right = 84.03999
-offset_bottom = 68.64798
+offset_bottom = 17.455994
 grow_vertical = 2
 text = "Settings"
 
-[node name="Exit" type="Button" parent="Menu/_main" unique_id=1961226256]
+[node name="Exit" type="Button" parent="gui/mainmenu/_main" unique_id=1961226256]
 anchors_preset = -1
 anchor_left = 0.105000004
-anchor_top = 0.499
+anchor_top = 0.65400004
 anchor_right = 0.105000004
-anchor_bottom = 0.499
+anchor_bottom = 0.65400004
 offset_left = -82.96001
-offset_top = 82.64798
+offset_top = -17.792023
 offset_right = 84.03999
-offset_bottom = 117.64798
+offset_bottom = 17.207977
 grow_vertical = 2
 text = "Exit"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Menu/_main" unique_id=335670982]
+[node name="RichTextLabel" type="RichTextLabel" parent="gui/mainmenu/_main" unique_id=335670982]
 anchors_preset = -1
 anchor_left = 0.171
 anchor_top = 0.17600001
@@ -137,18 +143,18 @@ anchor_right = 0.171
 anchor_bottom = 0.17600001
 offset_left = -175.992
 offset_top = -64.04801
-offset_right = 227.00797
+offset_right = 332.008
 offset_bottom = 63.952003
 theme = SubResource("Theme_wrm1d")
 theme_override_fonts/normal_font = SubResource("FontFile_3dryh")
 theme_override_font_sizes/normal_font_size = 90
-text = "Plat-Shift"
+text = "Temp name"
 
-[node name="_levels" type="CanvasLayer" parent="Menu" unique_id=1464886575]
+[node name="_levels" type="CanvasLayer" parent="gui/mainmenu" unique_id=1464886575]
 visible = false
 script = ExtResource("5_p57ef")
 
-[node name="Tutorial1" type="Button" parent="Menu/_levels" unique_id=88950142]
+[node name="Tutorial1" type="Button" parent="gui/mainmenu/_levels" unique_id=88950142]
 anchors_preset = -1
 anchor_left = 3.5870001
 anchor_top = 5.1000004
@@ -160,23 +166,23 @@ offset_right = -3934.224
 offset_bottom = -3048.8003
 text = "^Tutorial1"
 
-[node name="Back" type="Button" parent="Menu/_levels" unique_id=751388910]
+[node name="Back" type="Button" parent="gui/mainmenu/_levels" unique_id=1050080409]
 anchors_preset = -1
-anchor_left = 1.1370001
-anchor_top = 0.625
-anchor_right = 1.1370001
-anchor_bottom = 0.625
-offset_left = -1293.8241
-offset_top = -392.0
-offset_right = -1234.8241
-offset_bottom = -361.0
+anchor_left = 0.039
+anchor_top = 0.044000003
+anchor_right = 0.039
+anchor_bottom = 0.044000003
+offset_left = -28.928001
+offset_top = -15.512003
+offset_right = 30.071999
+offset_bottom = 15.487997
 text = "back"
 
-[node name="_deblevels" type="CanvasLayer" parent="Menu" unique_id=1521432529]
+[node name="_deblevels" type="CanvasLayer" parent="gui/mainmenu" unique_id=1521432529]
 visible = false
 script = ExtResource("4_u5sy4")
 
-[node name="Debug" type="Button" parent="Menu/_deblevels" unique_id=45509358]
+[node name="Debug" type="Button" parent="gui/mainmenu/_deblevels" unique_id=45509358]
 anchors_preset = -1
 anchor_left = 3.5870001
 anchor_top = 5.1000004
@@ -188,7 +194,7 @@ offset_right = -3934.224
 offset_bottom = -3048.8003
 text = "^debug"
 
-[node name="Back" type="Button" parent="Menu/_deblevels" unique_id=1477021451]
+[node name="Back" type="Button" parent="gui/mainmenu/_deblevels" unique_id=1477021451]
 anchors_preset = -1
 anchor_left = 1.1370001
 anchor_top = 0.625
@@ -200,12 +206,12 @@ offset_right = -1234.8241
 offset_bottom = -361.0
 text = "back"
 
-[node name="_pausemenu" type="CanvasLayer" parent="Menu" unique_id=1286632169]
+[node name="_pausemenu" type="CanvasLayer" parent="gui" unique_id=1286632169]
 process_mode = 3
 visible = false
 script = ExtResource("7_u5sy4")
 
-[node name="Pause" type="RichTextLabel" parent="Menu/_pausemenu" unique_id=2062210372]
+[node name="Pause" type="RichTextLabel" parent="gui/_pausemenu" unique_id=2062210372]
 anchors_preset = -1
 anchor_left = 5.637
 anchor_top = 2.0370002
@@ -219,7 +225,7 @@ theme = SubResource("Theme_p57ef")
 theme_override_font_sizes/normal_font_size = 50
 text = "Game Paused"
 
-[node name="Resume" type="Button" parent="Menu/_pausemenu" unique_id=1093377891]
+[node name="Resume" type="Button" parent="gui/_pausemenu" unique_id=1093377891]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 7.5250006
@@ -235,7 +241,7 @@ text = "Resume"
 flat = true
 alignment = 0
 
-[node name="Settings" type="Button" parent="Menu/_pausemenu" unique_id=953435831]
+[node name="Settings" type="Button" parent="gui/_pausemenu" unique_id=953435831]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 8.85
@@ -251,7 +257,7 @@ text = "Settins'"
 flat = true
 alignment = 0
 
-[node name="Menu" type="Button" parent="Menu/_pausemenu" unique_id=2001758500]
+[node name="Menu" type="Button" parent="gui/_pausemenu" unique_id=2001758500]
 anchors_preset = -1
 anchor_left = 2.8370001
 anchor_top = 10.3
